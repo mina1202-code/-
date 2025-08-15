@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>東京飯店比較表</title>
+  <style>
+    :root{--bg:#f6f7fb;--card:#fff;--text:#1a1a1a;--muted:#6b7280;--border:#e5e7eb;--accent:#111827;--chip:#eef2ff;--ok:#ecfdf5;--no:#fff1f2}
+    html,body{background:var(--bg);font-family:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:var(--text)}
+    .wrap{max-width:100%;margin:28px auto;padding:0 12px}
+    .title{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:10px}
+    .title h1{font-size:22px;margin:0 0 6px 0;font-weight:800}
+    .title small{color:var(--muted)}
+
+    .card{background:var(--card);border:1px solid var(--border);border-radius:16px;box-shadow:0 10px 24px rgba(16,24,40,.06)}
+    .table-wrap{border-radius:16px}
+
+    table{border-collapse:separate;border-spacing:0;width:100%;table-layout:fixed;font-size:13px}
+    thead th{position:sticky;top:0;background:var(--card);z-index:1}
+    th,td{padding:10px 10px;border-bottom:1px solid var(--border);vertical-align:top;white-space:normal;word-break:break-word}
+    th{font-weight:700;text-align:left}
+    tbody tr:hover{background:#fafafa}
+
+    .col-name{width:18%}
+    .col-spec{width:10%}
+    .col-price{width:12%}
+    .col-dry{width:6%}
+    .col-traffic{width:18%}
+    .col-pros{width:16%}
+    .col-cons{width:16%}
+    .col-note{width:14%}
+
+    .chip{display:inline-flex;align-items:center;gap:6px;padding:1px 8px;border-radius:999px;font-size:12px;border:1px solid var(--border);background:var(--chip)}
+    .ok{background:var(--ok)}
+    .no{background:var(--no)}
+    .muted{color:var(--muted)}
+
+    .price{line-height:1.25}
+    .price .tag{display:inline-block;border:1px solid var(--border);border-radius:6px;padding:0 6px;margin-right:4px;font-size:11px;color:var(--muted)}
+
+    .badge{display:inline-block;padding:3px 8px;border:1px solid var(--border);border-radius:999px;font-size:12px}
+
+    .scorebox{line-height:1.4}
+    .scorebox .line{display:block}
+
+    a.gmap{color:#2563eb;text-decoration:none;border-bottom:1px dashed #cbd5e1;padding-bottom:1px}
+    a.gmap:hover{text-decoration:underline}
+
+    .footer{display:flex;justify-content:flex-end;gap:8px;padding:10px}
+    .btn{appearance:none;border:none;background:var(--accent);color:#fff;padding:9px 12px;border-radius:10px;font-weight:700;cursor:pointer}
+    .btn:active{transform:translateY(1px)}
+
+    @media (max-width:980px){table{font-size:12px}th,td{padding:8px}.title h1{font-size:20px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="title">
+      <div>
+        <h1>東京飯店比較表</h1>
+        <small>評語欄為「Google / Booking 實際分數（含清潔/地點/CP值）」；點「Google」開啟地圖</small>
+      </div>
+      <div><span class="badge">可於此頁直接編輯數字，再匯出 PNG</span></div>
+    </div>
+
+    <div class="card table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th class="col-name">飯店</th>
+            <th class="col-spec">面積 / 床型</th>
+            <th class="col-price">價格（直/延）</th>
+            <th class="col-dry">乾濕</th>
+            <th class="col-traffic">交通（最近站 / 機場建議）</th>
+            <th class="col-pros">優點</th>
+            <th class="col-cons">缺點</th>
+            <th class="col-note">Google / Booking 分數</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="col-name">東京日本橋濱町飯店 <span class="muted">HAMACHO HOTEL TOKYO (NIHONBASHI)</span></td>
+            <td class="col-spec">15㎡／一大床</td>
+            <td class="col-price"><div class="price"><span class="tag">直</span>35,027<br><span class="tag">延</span>37,711</div></td>
+            <td class="col-dry"><span class="chip no">x</span></td>
+            <td class="col-traffic">水天宮前（半藏門線）／人形町（日比谷線）｜10–13 分</td>
+            <td class="col-pros">乾淨漂亮；浴室雖非乾濕分離但可接受</td>
+            <td class="col-cons">機場到不方便（有直達公車）</td>
+            <td class="col-note"><div class="scorebox"><span class="line"><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=HAMACHO+HOTEL+TOKYO+Nihonbashi+Tokyo" target="_blank" rel="noopener">Google</a>：— / 5</span><span class="line">Booking：總 9.1｜清 9.4／地 8.5／CP 8.9</span></div></td>
+          </tr>
+          <tr>
+            <td class="col-name">東京ONE飯店 <span class="muted">ONE@Tokyo</span></td>
+            <td>14㎡／一大床</td>
+            <td><div class="price"><span class="tag">直</span>—<br><span class="tag">延</span>26,234</div></td>
+            <td><span class="chip ok">v</span></td>
+            <td>押上｜5 分</td>
+            <td>乾濕分離；簡約；地點不錯；便宜</td>
+            <td>床長短約 20cm；房間小；洗手台無檯面；桌子小</td>
+            <td><div class="scorebox"><span class="line"><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=ONE%40Tokyo+Oshiage+Tokyo" target="_blank" rel="noopener">Google</a>：— / 5</span><span class="line">Booking：總 8.6｜清 8.9／地 9.0／CP 8.5</span></div></td>
+          </tr>
+          <tr>
+            <td>日本橋濱町科科頂級飯店 <span class="muted">KOKO HOTEL Premier Nihonbashi Hamacho</span></td>
+            <td>17㎡／一大床</td>
+            <td><div class="price"><span class="tag">直</span>—<br><span class="tag">延</span>35,900</div></td>
+            <td><span class="chip ok">v</span></td>
+            <td>東日本橋／人形町｜8–9 分</td>
+            <td>乾濕分離</td>
+            <td>浴室格局斜；裝潢普通</td>
+            <td><div class="scorebox"><span class="line"><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=KOKO+HOTEL+Premier+Nihonbashi+Hamacho+Tokyo" target="_blank" rel="noopener">Google</a>：— / 5</span><span class="line">Booking：總 8.6｜清 8.9／地 8.8／CP 8.4</span></div></td>
+          </tr>
+          <tr>
+            <td>Keisei Richmond Hotel Tokyo Monzennakacho</td>
+            <td>20㎡／一大床</td>
+            <td><div class="price"><span class="tag">直</span>—<br><span class="tag">延</span>35,963</div></td>
+            <td><span class="chip no">x</span></td>
+            <td>門前仲町｜5 分</td>
+            <td>房間大；浴室乾淨；有沙發</td>
+            <td>機場需轉兩段（其中一段步行約 9 分）</td>
+            <td><div class="scorebox"><span class="line"><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=Keisei+Richmond+Hotel+Tokyo+Monzennakacho" target="_blank" rel="noopener">Google</a>：— / 5</span><span class="line">Booking：總 8.9｜清 9.2／地 9.0／CP 8.8</span></div></td>
+          </tr>
+          <tr>
+            <td>星野 OMO5 五反田</td>
+            <td>20㎡／一大床</td>
+            <td><div class="price"><span class="tag">直</span>47,560<br><span class="tag">延</span>—</div></td>
+            <td><span class="chip ok">v</span></td>
+            <td>五反田（山手線）｜8–9 分</td>
+            <td>熟悉、住過</td>
+            <td></td>
+            <td><div class="scorebox"><span class="line"><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=Hoshino+Resorts+OMO5+Tokyo+Gotanda" target="_blank" rel="noopener">Google</a>：— / 5</span><span class="line">Booking：總 8.8｜清 9.2／地 8.9／CP 8.4</span></div></td>
+          </tr>
+          <tr>
+            <td>星野 OMO3 淺草</td>
+            <td>15㎡／一大床</td>
+            <td><div class="price"><span class="tag">直</span>45,674<br><span class="tag">延</span>—</div></td>
+            <td><span class="chip ok">v</span></td>
+            <td>淺草站｜5 或 5+5 分</td>
+            <td>行李箱可完全攤開；上下舖設計（下床上客廳）</td>
+            <td></td>
+            <td><div class="scorebox"><span class="line"><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=Hoshino+Resorts+OMO3+Tokyo+Asakusa" target="_blank" rel="noopener">Google</a>：— / 5</span><span class="line">Booking：—</span></div></td>
+          </tr>
+          <tr>
+            <td>星野 OMO5 大塚</td>
+            <td>19㎡／一大床</td>
+            <td><div class="price"><span class="tag">直</span>41,410<br><span class="tag">延</span>—</div></td>
+            <td><span class="chip ok">v</span></td>
+            <td>大塚站｜3 分</td>
+            <td>行李箱可完全攤開；有浴缸；上下舖設計（下床上客廳）</td>
+            <td></td>
+            <td><div class="scorebox"><span class="line"><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=Hoshino+Resorts+OMO5+Tokyo+Otsuka" target="_blank" rel="noopener">Google</a>：— / 5</span><span class="line">Booking：總 8.7｜清 8.9／地 9.3／CP 8.6</span></div></td>
+          </tr>
+          <tr>
+            <td>星野 OMO5 赤坂</td>
+            <td>19㎡／一大床</td>
+            <td><div class="price"><span class="tag">直</span>48,708<br><span class="tag">延</span>—</div></td>
+            <td><span class="chip ok">v</span></td>
+            <td>赤坂見附／赤坂（銀座線）｜5–6 分</td>
+            <td></td>
+            <td>沒有單獨休憩的小沙發</td>
+            <td><div class="scorebox"><span class="line"><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=Hoshino+Resorts+OMO5+Tokyo+Akasaka" target="_blank" rel="noopener">Google</a>：— / 5</span><span class="line">Booking：總 8.5｜清 8.9／地 9.3／CP 8.4</span></div></td>
+          </tr>
+          <tr>
+            <td>JR-East Hotel Mets Mejiro</td>
+            <td>16㎡／一大床</td>
+            <td><div class="price"><span class="tag">直</span>33,804<br><span class="tag">延</span>—</div></td>
+            <td><span class="chip no">x</span></td>
+            <td>目白（山手線）｜2 分</td>
+            <td>算乾淨；可打開行李箱；位置很好</td>
+            <td>浴室很普通；可能小舊</td>
+            <td><div class="scorebox"><span class="line"><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=JR-East+Hotel+Mets+Mejiro" target="_blank" rel="noopener">Google</a>：— / 5</span><span class="line">Booking：總 8.8｜清 9.4／地 9.3／CP 8.6</span></div></td>
+          </tr>
+          <tr>
+            <td>JR-East Hotel Mets Komagome</td>
+            <td>16㎡／一大床</td>
+            <td><div class="price"><span class="tag">直</span>29,748<br><span class="tag">延</span>—</div></td>
+            <td><span class="chip no">x</span></td>
+            <td>駒込（山手線）｜1 分</td>
+            <td>算乾淨；可打開行李箱；位置很好</td>
+            <td>床 140；房間普通；可能小舊</td>
+            <td><div class="scorebox"><span class="line"><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=JR-East+Hotel+Mets+Komagome" target="_blank" rel="noopener">Google</a>：— / 5</span><span class="line">Booking：總 8.9｜清 9.3／地 9.2／CP 8.8</span></div></td>
+          </tr>
+          <tr>
+            <td>JR East Hotel Mets Premier Akihabara</td>
+            <td>17㎡／一大床</td>
+            <td><div class="price"><span class="tag">直</span>46,531<br><span class="tag">延</span>—</div></td>
+            <td><span class="chip ok">v</span></td>
+            <td>秋葉原（山手線）｜1 分</td>
+            <td>有浴缸；席夢思；位置很好</td>
+            <td>房內沒舒服的沙發</td>
+            <td><div class="scorebox"><span class="line"><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=JR-East+Hotel+Mets+Premier+Akihabara" target="_blank" rel="noopener">Google</a>：— / 5</span><span class="line">Booking：總 9.1｜清 9.3／地 9.8／CP 8.7</span></div></td>
+          </tr>
+          <tr>
+            <td>JR-EAST HOTEL METS PREMIER GOTANDA</td>
+            <td>18㎡／一大床</td>
+            <td><div class="price"><span class="tag">直</span>47,724<br><span class="tag">延</span>—</div></td>
+            <td><span class="chip ok">v</span></td>
+            <td>五反田（山手線）｜1 分</td>
+            <td>浴室高級；有小沙發；看起來很新</td>
+            <td>貴到爆</td>
+            <td><div class="scorebox"><span class="line"><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=JR-East+Hotel+Mets+Premier+Gotanda" target="_blank" rel="noopener">Google</a>：— / 5</span><span class="line">Booking：總 9.0｜清 9.5／地 9.6／CP 8.8</span></div></td>
+          </tr>
+          <tr>
+            <td>JR East Hotel Mets Premier Tokyo Bay Shinkiba</td>
+            <td>16㎡／一大床</td>
+            <td><div class="price"><span class="tag">直</span>39,929<br><span class="tag">延</span>—</div></td>
+            <td><span class="chip no">x</span></td>
+            <td>新木場（有樂町線）｜5–6 分</td>
+            <td>海邊；迪士尼近；頗新</td>
+            <td>去哪都稍遠，但還好</td>
+            <td><div class="scorebox"><span class="line"><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=JR-East+Hotel+Mets+Premier+Tokyo+Bay+Shin-Kiba" target="_blank" rel="noopener">Google</a>：— / 5</span><span class="line">Booking：總 8.9｜清 9.5／地 9.0／CP 8.9</span></div></td>
+          </tr>
+          <tr>
+            <td>JR-EAST HOTEL METS AKABANE</td>
+            <td>16㎡／一大床</td>
+            <td><div class="price"><span class="tag">直</span>23,226<br><span class="tag">延</span>—</div></td>
+            <td><span class="chip no">x</span></td>
+            <td>赤羽（京濱東北線）｜3 分</td>
+            <td>便宜到爆；去哪都還算方便</td>
+            <td>小舊；床應該 140</td>
+            <td><div class="scorebox"><span class="line"><a class="gmap" href="https://www.google.com/maps/search/?api=1&query=JR-East+Hotel+Mets+Akabane" target="_blank" rel="noopener">Google</a>：— / 5</span><span class="line">Booking：總 8.5｜清 8.8／地 9.2／CP 8.1</span></div></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="footer">
+        <button class="btn" onclick="downloadPNG()">匯出成 PNG 圖檔</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function downloadPNG(){
+      const card = document.querySelector('.card');
+      const rect = card.getBoundingClientRect();
+      const width = Math.ceil(rect.width);
+      const height = Math.ceil(rect.height);
+      const xml = new XMLSerializer().serializeToString(
+        new DOMParser().parseFromString(`<!DOCTYPE html><svg xmlns='http://www.w3.org/2000/svg' width='${width}' height='${height}'>
+  <foreignObject width='100%' height='100%'>
+    <div xmlns='http://www.w3.org/1999/xhtml' style='width:${width}px;height:${height}px;'>${card.outerHTML}</div>
+  </foreignObject>
+</svg>`, 'image/svg+xml').documentElement
+      );
+      const svgBlob = new Blob([xml], {type: 'image/svg+xml;charset=utf-8'});
+      const url = URL.createObjectURL(svgBlob);
+      const img = new Image();
+      img.onload = () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = width * 2; canvas.height = height * 2;
+        const ctx = canvas.getContext('2d');
+        ctx.scale(2,2); ctx.fillStyle = getComputedStyle(document.documentElement).getPropertyValue('--bg') || '#fff';
+        ctx.fillRect(0,0,width,height); ctx.drawImage(img,0,0,width,height); URL.revokeObjectURL(url);
+        canvas.toBlob((blob)=>{ const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = '東京飯店比較表.png'; a.click(); URL.revokeObjectURL(a.href); }, 'image/png');
+      };
+      img.src = url;
+    }
+  </script>
+</body>
+</html>
